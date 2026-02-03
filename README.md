@@ -1,4 +1,4 @@
-# 🎤 Sound Detection Circle
+# 🎤 p5JS Sound Detection
 
 Detect sound and use it as an input in p5JS.🎵✨
 
@@ -6,8 +6,8 @@ Detect sound and use it as an input in p5JS.🎵✨
 
 This project listens to sounds through your microphone and draws a pulsing circle that grows and shrinks based on how loud the sound is.
 
-- **Quiet sounds** (like whispers 🤫) keep the circle small
-- **Loud sounds** (like clapping 👏 or shouting 🗣️) make the circle BIG
+- **Quiet sounds** small circle
+- **Loud sounds** big circle
 - The circle responds in **real-time** as you make noise!
 
 ## 📁 Project Files
@@ -64,7 +64,8 @@ function draw() {
 - Runs about 60 times per second ⚡
 - Measures the sound amplitude (how loud it is)
 - Draws a circle in the center that changes size based on the sound
-- Multiplies by 1000 to make the effect more dramatic 📊
+- Multiplies by 1000 to make the effect more dramatic, audioInput.getLevel() returns a number between 0 and 1 so needs multiplying 📊
+- explore the map() function in p5js if you want to adjust this number in a more sophisticated way.
 
 ## 🎮 Try Experimenting!
 
@@ -108,7 +109,6 @@ Modify the `amplitude * 1000` part:
 
 - `amplitude * 500` - Circle is less sensitive (smaller changes)
 - `amplitude * 1500` - Circle is more dramatic (bigger changes)
-- `amplitude * 2000` - MEGA dramatic! 💥
 
 ### Add a Border 🎯
 
@@ -118,7 +118,6 @@ Make the circle have an outline:
 stroke(255, 100, 0); // Orange border
 strokeWeight(5); // 5 pixel thick border
 circle(width / 2, height / 2, amplitude * 1000);
-noStroke(); // Turn off stroke for next shapes
 ```
 
 ## 📚 Learn More About p5.js
